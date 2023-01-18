@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#4e7a91">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="172dp"
+        android:layout_height="156dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/ic_baseline_person_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/sgn_enteremail"
+        android:layout_width="322dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="@color/black"
+        android:backgroundTintMode="add"
+        android:gravity="center"
+        android:hint="Enter Email Here"
+        android:inputType="textEmailAddress"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:textSize="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageView" />
+
+    <EditText
+        android:id="@+id/sgn_enterpswr"
+        android:layout_width="322dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:hint="Enter Password Here"
+        android:inputType="textPassword"
+        android:textSize="25dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sgn_enteremail" />
+
+    <TextView
+        android:id="@+id/sgn_frgtpswr"
+        android:layout_width="271dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="@color/black"
+        android:backgroundTintMode="add"
+        android:gravity="center"
+        android:text="Forgot Password?"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="@id/sgn_enterpswr"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="@id/sgn_enterpswr"
+        app:layout_constraintTop_toBottomOf="@id/sgn_enterpswr" />
+
+    <LinearLayout
+        android:layout_width="339dp"
+        android:layout_height="114dp"
+        android:layout_marginTop="50dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sgn_frgtpswr">
+
+        <TextView
+            android:id="@+id/sgn_sgnin"
+            android:layout_width="144dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="Sign In"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/sgn_sgnup"
+            android:layout_width="145dp"
+            android:layout_height="70dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="Sign Up"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

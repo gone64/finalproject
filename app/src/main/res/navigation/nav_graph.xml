@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/addItemFragment">
+    <fragment
+        android:id="@+id/profilefragment"
+        android:name="com.example.myapplication.ItemsFragment"
+        android:label="fragment_items"
+        tools:layout="@layout/fragment_items" />
+    <fragment
+        android:id="@+id/addItemFragment"
+        android:name="com.example.myapplication.AddItemFragment"
+        android:label="fragment_add_item"
+        tools:layout="@layout/fragment_add_item" />
+
+</navigation>
