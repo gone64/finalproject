@@ -11,7 +11,7 @@ import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.ktx.Firebase
 
-class MainActivity2 : AppCompatActivity() {
+class SignUpActivity : AppCompatActivity() {
     lateinit var crt_mail : EditText
     lateinit var crt_rptmail : EditText
     lateinit var crt_pswr : EditText
@@ -22,7 +22,7 @@ class MainActivity2 : AppCompatActivity() {
     private lateinit var auth : FirebaseAuth
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main2)
+        setContentView(R.layout.activity_signup)
         crt_mail = findViewById(R.id.crt_enteremail)
         crt_rptmail = findViewById(R.id.crt_rptemail)
         crt_pswr = findViewById(R.id.crt_enterpsw)

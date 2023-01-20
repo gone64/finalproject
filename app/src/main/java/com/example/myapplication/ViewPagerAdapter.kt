@@ -14,7 +14,7 @@ class ViewPagerAdapter(activity : AppCompatActivity): FragmentStateAdapter(activ
             return AddItemFragment()
         }
         else {
-            return ItemsFragment()
+            return ProfileFragment()
         }
 
 }

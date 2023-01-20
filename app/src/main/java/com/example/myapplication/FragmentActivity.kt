@@ -5,12 +5,11 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
-import kotlinx.android.synthetic.main.activity_main3.*
-import kotlinx.android.synthetic.main.fragment_add_item.*
-import kotlinx.android.synthetic.main.fragment_items.*
+import kotlinx.android.synthetic.main.activity_fragment.*
 
 
-class MainActivity3 : AppCompatActivity() {
+
+class FragmentActivity : AppCompatActivity() {
     private lateinit var viewpager2 : ViewPager2
     private lateinit var viewPagerAdapter : ViewPagerAdapter
     private lateinit var tabLayout: TabLayout
@@ -20,7 +19,7 @@ class MainActivity3 : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main3)
+        setContentView(R.layout.activity_fragment)
 
         viewpager2 = findViewById(R.id.viewPager2)
         tabLayout = findViewById(R.id.tabLayout)

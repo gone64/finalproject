@@ -6,7 +6,7 @@
     app:startDestination="@id/addItemFragment">
     <fragment
         android:id="@+id/profilefragment"
-        android:name="com.example.myapplication.ItemsFragment"
+        android:name="com.example.myapplication.ProfileFragment"
         android:label="fragment_items"
         tools:layout="@layout/fragment_items" />
     <fragment

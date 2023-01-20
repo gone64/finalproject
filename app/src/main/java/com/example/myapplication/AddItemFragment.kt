@@ -5,14 +5,8 @@ import android.os.Bundle
 import android.view.View
 import android.widget.*
 import androidx.fragment.app.Fragment
-import com.bumptech.glide.Glide
-import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
-import com.google.firebase.ktx.Firebase
-import com.google.firebase.storage.FirebaseStorage
-import com.google.firebase.storage.ktx.storage
-import com.squareup.picasso.Picasso
 
 class AddItemFragment : Fragment(R.layout.fragment_add_item) {
     private lateinit var additem: TextView
@@ -40,7 +34,7 @@ class AddItemFragment : Fragment(R.layout.fragment_add_item) {
 
         val button = view.findViewById<TextView>(R.id.button)
         button.setOnClickListener {
-            startActivity(Intent(this.context, MainActivity5::class.java))
+            startActivity(Intent(this.context, ShopActivity::class.java))
 
         }
         additem.setOnClickListener{

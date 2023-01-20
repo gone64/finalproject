@@ -2,27 +2,26 @@ package com.example.myapplication
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.GridLayoutManager
-import com.example.myapplication.databinding.ActivityMain5Binding
+import com.example.myapplication.databinding.ActivityShopBinding
 import com.google.firebase.database.*
-import kotlinx.android.synthetic.main.activity_main5.*
+import kotlinx.android.synthetic.main.activity_shop.*
 
-class MainActivity5 : AppCompatActivity() {
-    private lateinit var binding: ActivityMain5Binding
+class ShopActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityShopBinding
     private lateinit var dataList: ArrayList<DataClass>
     private lateinit var adapter: MyAdapter
     var databaseReference: DatabaseReference? = null
     var eventListener:ValueEventListener? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMain5Binding.inflate(layoutInflater)
+        binding = ActivityShopBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        val gridLayoutManager = GridLayoutManager(this@MainActivity5,1)
+        val gridLayoutManager = GridLayoutManager(this@ShopActivity,1)
         binding.recycler1.layoutManager = gridLayoutManager
 
         dataList = ArrayList()
-        adapter = MyAdapter(this@MainActivity5,dataList)
+        adapter = MyAdapter(this@ShopActivity,dataList)
         binding.recycler1.adapter = adapter
         recycler1.setHasFixedSize(true)
         databaseReference = FirebaseDatabase.getInstance().getReference("Products")

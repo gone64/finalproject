@@ -12,7 +12,7 @@ import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.ktx.Firebase
 
-class MainActivity : AppCompatActivity() {
+class SignInActivity : AppCompatActivity() {
 
 
     lateinit var sgn_mail : EditText
@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_signin)
         val firebase : DatabaseReference = FirebaseDatabase.getInstance().getReference()
         sgn_mail = findViewById(R.id.sgn_enteremail)
 
@@ -38,14 +38,14 @@ class MainActivity : AppCompatActivity() {
 
 
         sgn_sgnup.setOnClickListener {
-            startActivity(Intent(this,MainActivity2::class.java))
+            startActivity(Intent(this,SignUpActivity::class.java))
 
         }
         sgn_sgnin.setOnClickListener {
             login()
         }
         sgn_frgtpswr.setOnClickListener {
-            startActivity(Intent(this,MainActivity4::class.java))
+            startActivity(Intent(this,ForgotPasswordActivity::class.java))
         }
 
 
@@ -59,7 +59,7 @@ class MainActivity : AppCompatActivity() {
         }else{
         auth.signInWithEmailAndPassword(email,pass).addOnCompleteListener {
             if (it.isSuccessful){
-                val intent = Intent(this, MainActivity3::class.java)
+                val intent = Intent(this, FragmentActivity::class.java)
                 intent.putExtra("str",email)
                 intent.putExtra("rtr",pass)
                 startActivity(intent)
